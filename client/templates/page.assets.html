@@ -1,0 +1,33 @@
+<template name="assetsPageTemplate">
+    <div id="assetsPage" class="light page">
+        <div class="doesnt-overlap-header">
+            <!--<h4>SNOMED Anatomical Reference</h4>-->
+            <div class="spacer row"></div>
+            <div class="row">
+                <div id="snomed-anatomy-list">
+                    <input id="filterInput"  type="text" class="search" placeholder="filter {{snomed_count}} records" />
+                    <ul class="anatomy-images list">
+                        {{#each snomed_reference}}
+                        {{> anatomyItemTemplate}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="hide-for-medium hide-for-small fullheight sidebar panel">
+                {{> assetsSideBarTemplate}}
+            </div>
+            <div class="hide-for-medium hide-for-small fullheight right-anchored sidebar panel">
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="anatomyItemTemplate">
+    <li class="two column anatomy-item with-rounded-corners">
+        <div class="hidden anatomy-name">{{anatomy_image}}</div>
+        <img src="{{anatomy_image}}">
+    </li>
+</template>
+<template name="assetsSideBarTemplate">
+    <img id="sidebarImage" src="{{selected_image}}">
+</template>

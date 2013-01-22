@@ -1,0 +1,50 @@
+<head>
+  <title>Canvas Tracker</title>
+</head>
+
+<body>
+  {{> app_container }}
+</body>
+
+
+<template name="app_container">
+        {{> headerBarTemplate }}
+        {{> workqueuePageTemplate }}
+        {{> assetsPageTemplate }}
+        {{> footerBarTemplate }}
+</template>
+
+<template name="workqueuePageTemplate">
+    <div id="workqueuePage" class="fullheight light page">
+        <div class="hide-for-medium hide-for-small fullheight right-anchored sidebar panel">
+            {{> tag_filter}}
+        </div>
+        <div class="row">
+            {{> todos}}
+        </div>
+        <div class="hide-for-medium hide-for-small fullheight sidebar panel">
+            {{> lists}}
+        </div>
+    </div>
+</template>
+
+
+<template name="headerBarTemplate">
+    <div id="headerBar" data-role="header" data-theme="none">
+        <ul class="nav-bar header-nav-bar">
+            <li><a href="#workqueuePage" onclick="showPage('#workqueuePage');"><span class="pictographs">4  </span>Tasks</a></li>
+            <li><a href="#visualSearchPage" onclick="showPage('#assetsPage');"><span class="pictographs">E  </span>Browse Assets</a></li>
+            <li><a id="breadCrumbLink" href="#"></a></li>
+            <li style="position: fixed; right: 0px;"><a href="#">{{loginButtons align="right"}}</a></li>
+        </ul>
+    </div>
+</template>
+<template name="footerBarTemplate">
+    <div id="footerActionBar" data-role="footer" data-theme="none" class="nav-bar bottom-anchor">
+        <ul class="nav-bar footer-nav-bar ">
+        </ul>
+    </div>
+</template>
+
+
+
