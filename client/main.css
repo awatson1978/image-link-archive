@@ -14,8 +14,6 @@ html, body {
 body {
     font-size: 16px;
     line-height: 1.5;
-    background: #eeeeee;
-    color: #333333;
 }
 
 body, input {
@@ -30,22 +28,7 @@ a, a:visited, a:active {
     color: #258;
 }
 
-h3 {
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 120%;
-    padding: 8px 6px;
-    text-align: center;
-}
 
-/*#top-tag-filter, #main-pane, #side-pane, #bottom-pane {*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*overflow: hidden;*/
-/*}*/
 
 #top-tag-filter {
     left: 200px;
@@ -282,6 +265,12 @@ h3 {
     height: 40px;
     width: 100%;
     z-index: 1000;
+}
+#json-content{
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    min-height: 40px;
 }
 .bottom-anchor{
     position: fixed;

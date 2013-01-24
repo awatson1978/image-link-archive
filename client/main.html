@@ -3,29 +3,15 @@
 </head>
 
 <body>
-  {{> app_container }}
+    {{> app_container }}
 </body>
 
 
 <template name="app_container">
         {{> headerBarTemplate }}
         {{> workqueuePageTemplate }}
-        {{> assetsPageTemplate }}
+        {{> libraryPageTemplate }}
         {{> footerBarTemplate }}
-</template>
-
-<template name="workqueuePageTemplate">
-    <div id="workqueuePage" class="fullheight light page">
-        <div class="hide-for-medium hide-for-small fullheight right-anchored sidebar panel">
-            {{> tag_filter}}
-        </div>
-        <div class="row">
-            {{> todos}}
-        </div>
-        <div class="hide-for-medium hide-for-small fullheight sidebar panel">
-            {{> lists}}
-        </div>
-    </div>
 </template>
 
 
@@ -33,15 +19,22 @@
     <div id="headerBar" data-role="header" data-theme="none">
         <ul class="nav-bar header-nav-bar">
             <li><a href="#workqueuePage" onclick="showPage('#workqueuePage');"><span class="pictographs">4  </span>Tasks</a></li>
-            <li><a href="#visualSearchPage" onclick="showPage('#assetsPage');"><span class="pictographs">E  </span>Browse Assets</a></li>
+            <li><a href="#visualSearchPage" onclick="showPage('#libraryPage');"><span class="pictographs">E </span>Library</a></li>
             <li><a id="breadCrumbLink" href="#"></a></li>
             <li style="position: fixed; right: 0px;"><a href="#">{{loginButtons align="right"}}</a></li>
         </ul>
     </div>
 </template>
 <template name="footerBarTemplate">
+    {{#if show_json_panel}}
+        <div id="json-content" class="panel notepad">
+            {{ asset_json }}
+        </div>
+    {{/if}}
+
     <div id="footerActionBar" data-role="footer" data-theme="none" class="nav-bar bottom-anchor">
         <ul class="nav-bar footer-nav-bar ">
+            <li><a onclick="toggleJsonPanel();"><span class="pictographs">E </span>JSON</a></li>
         </ul>
     </div>
 </template>
