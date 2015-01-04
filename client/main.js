@@ -34,15 +34,15 @@ Session.set('selected_image_id', false);
 
 
 
-
-Router.configure({
-  layoutTemplate: 'appLayout'
-});
-
-
-
-Router.route('/', {
-  path: '/',
-  name: 'libraryPage',
-  template: 'libraryPage'
-});
+//
+// Router.configure({
+//   layoutTemplate: 'appLayout'
+// });
+//
+//
+//
+// Router.route('/', {
+//   path: '/',
+//   name: 'libraryPage',
+//   template: 'libraryPage'
+// });
