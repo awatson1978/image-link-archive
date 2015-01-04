@@ -18,8 +18,12 @@
     <div class="doesnt-overlap-header">
         <div id="items-view">
             <div id="new-todo-box">
+              {{#if done_checkbox}}
+                <input type="text" id="new-todo" placeholder="New item" checked="checked"/>              
+              {{else}}
                 <input type="text" id="new-todo" placeholder="New item" />
-            </div>
+              {{/if}}
+              </div>
             <ul id="item-list">
                 {{#each todos}}
                 {{> todo_item}}
@@ -39,7 +43,7 @@
         {{else}}
         <div class="destroy"></div>
         <div class="display">
-            <input class="check" name="markdone" type="checkbox" {{{done_checkbox}}} />
+            <input class="check" name="markdone" type="checkbox" />
             <div class="todo-text">{{text}}</div>
         </div>
         {{/if}}

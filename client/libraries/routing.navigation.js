@@ -1,16 +1,13 @@
-function hidePages(){
+hidePages = function(){
     $('.page').addClass('hidden');
 }
 
-function showPage(page){
+showPage = function(page){
     hidePages();
     $(page).removeClass('hidden');
     Session.set('current_page', page);
     parseBreadCrumbs(page);
 }
-function showCurrentSessionPage(){
+showCurrentSessionPage = function(){
     showPage(Session.get('current_page'));
-}
-
-function parseBreadCrumbs(){
 }

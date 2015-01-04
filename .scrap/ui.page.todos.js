@@ -1,63 +1,71 @@
 ////////// Todos //////////
 
-Template.todos.any_list_selected = function () {
+Template.todos.helpers({
+  any_list_selected: function(){
     return !Session.equals('list_id', null);
-};
-
-Template.todos.events(okCancelEvents(
-    '#new-todo',
-    {
-        ok: function (text, evt) {
-            var tag = Session.get('tag_filter');
-            Todos.insert({
-                text: text,
-                list_id: Session.get('list_id'),
-                done: false,
-                timestamp: (new Date()).getTime(),
-                tags: tag ? [tag] : []
-            });
-            evt.target.value = '';
-        }
-    }));
-
-Template.todos.todos = function () {
+  },
+  todos: function () {
     // Determine which todos to display in main pane,
     // selected based on list_id and tag_filter.
 
     var list_id = Session.get('list_id');
     if (!list_id)
-        return {};
+      return {};
 
-    var sel = {list_id: list_id};
-    var tag_filter = Session.get('tag_filter');
-    if (tag_filter)
+      var sel = {list_id: list_id};
+      var tag_filter = Session.get('tag_filter');
+      if (tag_filter)
         sel.tags = tag_filter;
 
-    return Todos.find(sel, {sort: {timestamp: 1}});
-};
+        return Todos.find(sel, {sort: {timestamp: 1}});
+  },
+});
 
-Template.todo_item.tag_objs = function () {
+
+
+
+Template.todos.events(okCancelEvents('#new-todo',{
+    ok: function (text, evt) {
+        var tag = Session.get('tag_filter');
+        Todos.insert({
+            text: text,
+            list_id: Session.get('list_id'),
+            done: false,
+            timestamp: (new Date()).getTime(),
+            tags: tag ? [tag] : []
+        });
+        evt.target.value = '';
+    }
+}));
+
+
+
+
+Template.todo_item.helpers({
+  tag_objs: function(){
     var todo_id = this._id;
     return _.map(this.tags || [], function (tag) {
-        return {todo_id: todo_id, tag: tag};
+      return {todo_id: todo_id, tag: tag};
     });
-};
-
-Template.todo_item.done_class = function () {
+  },
+  done_class: function () {
     return this.done ? 'done' : '';
-};
-
-Template.todo_item.done_checkbox = function () {
-    return this.done ? 'checked="checked"' : '';
-};
-
-Template.todo_item.editing = function () {
+  },
+  done_checkbox: function () {
+    return this.done;
+  },
+  editing: function () {
     return Session.equals('editing_itemname', this._id);
-};
-
-Template.todo_item.adding_tag = function () {
+  },
+  adding_tag: function () {
     return Session.equals('editing_addtag', this._id);
-};
+  },
+});
+
+
+
+
+
 
 Template.todo_item.events({
     'click .check': function () {
