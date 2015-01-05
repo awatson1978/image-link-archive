@@ -4,7 +4,7 @@ image-link-archive
 A basic image link archive.  Intended to be used as a repository of medical-illustration images or as a thumbnails interface for a PACS archive.  
 
 
-![Scheduling Screenshot](https://raw.githubusercontent.com/awatson1978/clinical-scheduling/master/public/image-link-archive-screenshot.png)  
+![Scheduling Screenshot](https://raw.githubusercontent.com/awatson1978/image-link-archive/master/public/image-link-archive-screenshot.png)  
 
 
 ============================
