@@ -1,15 +1,31 @@
-Installation
+image-link-archive
+=================
 
-A) If you're on Windows, install Meteor with the installer:
-http://win.meteor.com/
-
-B) Copy this bundle to a directory.
-
-C) Run 'meteor' from the command line in the canvas-tracker directory.
-
-D) Open your browser to http://localhost:3000
+A basic image link archive.  Intended to be used as a repository of medical-illustration images or as a thumbnails interface for a PACS archive.  
 
 
-If you have a GitHub account, fork the Meteor repo at :
-https://github.com/meteor/meteor
+![Scheduling Screenshot](https://raw.githubusercontent.com/awatson1978/clinical-scheduling/master/public/image-link-archive-screenshot.png)  
 
+
+============================
+#### Meteor Version  
+
+1.0
+
+============================
+#### Installation  
+
+
+````sh
+# Should be as simple as cloning the repository...  
+git clone https://github.com/awatson1978/image-link-archive.git
+cd image-link-archive
+
+# And then running it...
+meteor
+````
+
+============================
+#### Licensing
+
+MIT License. Use as you wish, including for commercial purposes.

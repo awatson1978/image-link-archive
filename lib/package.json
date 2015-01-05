@@ -1,8 +1,0 @@
-{
-    "name": "canvas-tracker",
-    "version": "0.1.0",
-    "engines": {
-        "node": "0.8.x",
-        "npm":  "1.1.x"
-    }
-}
