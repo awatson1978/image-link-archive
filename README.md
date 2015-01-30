@@ -1,7 +1,7 @@
 image-link-archive
 =================
 
-A basic image link archive.  Intended to be used as a repository of medical-illustration images or as a thumbnails interface for a PACS archive.  
+A basic image link archive.  Intended to be used as a repository of medical-illustration images or as a thumbnails interface for a PACS archive.  Currently a single-page app.  Next update will include basic CRUD pattern.
 
 
 ![Scheduling Screenshot](https://raw.githubusercontent.com/awatson1978/image-link-archive/master/public/image-link-archive-screenshot.png)  
