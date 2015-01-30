@@ -1,0 +1,15 @@
+<template name="myLibraryPage">
+  <div id="myLibraryPage" class="padded page fixed">
+    <br>
+    <div>
+      <div class="scrollable col col-md-6">
+        {{> imageAssetsGrid }}
+      </div>
+      <div class="col col-md-6">
+        {{> assetsDisplayTemplate}}
+        <br>
+        {{> imageAssetInfoTemplate}}
+      </div>
+    </div>
+  </div>
+</template>

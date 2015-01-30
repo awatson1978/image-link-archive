@@ -1,20 +1,8 @@
-<template name="libraryPage">
-  <div id="libraryPage" class="padded page">
-    <br>
-    <div>
-      <div class="col col-md-6">
-        {{> imageAssetsGrid }}
-      </div>
-      <div class="col col-md-6">
-        {{> assetsDisplayTemplate}}
-        <br>
-        {{> imageAssetInfoTemplate}}
-      </div>
-    </div>
+<template name="assetsDisplayTemplate">
+  <div class="panel panel-default">
+    <img class="display-image" src="{{selected_image}}">
   </div>
 </template>
-
-
 
 <template name="imageAssetInfoTemplate">
   <div class="panel panel-default">
@@ -48,29 +36,5 @@
       <span class="bold">Library Folder:</span>
       <div class="anatomy-name">{{anatomy_image}}</div>
     </div>
-  </div>
-</template>
-
-
-<template name="imageAssetsGrid">
-  <ul class="assets-list list-unstyled">
-    {{#each image_assets}}
-      {{> imageAssetGridItemTemplate}}
-    {{/each}}
-  </ul>
-</template>
-<template name="imageAssetGridItemTemplate">
-  <li class="col-md-4 ">
-    <div class="panel panel-default anatomy-item">
-      <div class="hidden anatomy-name">{{anatomy_image}}</div>
-      <img class="imageThumbnail" src="{{anatomy_image}}">
-    </div>
-  </li>
-</template>
-
-
-<template name="assetsDisplayTemplate">
-  <div class="panel panel-default">
-    <img class="display-image" src="images/grays.anatomy.tiles/{{selected_image}}">
   </div>
 </template>

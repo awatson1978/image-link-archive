@@ -140,8 +140,9 @@ Meteor.startup(function () {
         for (var i = 0; i < data.length; i++) {
             Anatomy.insert({
                 name:   data[i].name,
-                image:  data[i].image
-            });
+                image: 'images/grays.anatomy.thumbnails/' + data[i].name + '.png'
+                //image:  data[i].image
+              });
         }
     }
 });

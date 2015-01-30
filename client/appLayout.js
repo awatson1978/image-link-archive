@@ -1,1 +1,1 @@
-Session.set('selected_image_id', false);
+Session.set('selectedImageId', false);

@@ -3,6 +3,10 @@
 </head>
 
 <template name="appLayout">
+  {{> deleteImageModal}}
+  {{> upsertImageModal}}
+  {{> previewImageModal}}
+
   {{> headerNavbar }}
   {{> yield }}
   {{> footerNavbar }}

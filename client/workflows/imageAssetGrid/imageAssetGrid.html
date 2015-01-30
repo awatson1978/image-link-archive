@@ -1,0 +1,12 @@
+<template name="imageAssetsGrid">
+  <ul class="assets-list list-unstyled">
+    {{#each image_assets}}
+    <li class="col-md-4 ">
+      <div class="panel panel-default anatomy-item">
+        <div class="hidden anatomy-name">{{anatomy_image}}</div>
+        <img class="imageThumbnail" src="{{anatomy_image}}">
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+</template>

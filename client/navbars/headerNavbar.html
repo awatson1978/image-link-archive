@@ -1,14 +1,13 @@
 <template name="headerNavbar">
   <div id="headerNavbar" class="navbar navbar-default navbar-fixed-top">
     <a class="navbar-brand" href="#">Image Link Archive</a>
-    <form class="navbar-form navbar-left" role="search">
+    <form class="hidden-xs navbar-form navbar-left" role="search">
       <div class="form-group">
         <input id="librarySearchInput" type="text" class="form-control" placeholder="Search">
       </div>
-      <!-- <button type="submit" class="btn btn-default">Submit</button> -->
     </form>
 
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="hidden-xs nav navbar-nav navbar-right">
       <li><a href="https://github.com/awatson1978/image-link-archive"><i class="fa fa-github"></i>  Get the code.</a></li>
       <!-- <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -16,22 +15,6 @@
           <li style="position: fixed; right: 0px;"><a href="#">{{> loginButtons align="right"}}</a></li>
         </ul>
       </li> -->
-    </ul>
-  </div>
-</template>
-
-
-
-<template name="footerNavbar">
-  {{#if show_json_panel}}
-  <div id="json-content" class="panel notepad">
-    {{ asset_json }}
-  </div>
-  {{/if}}
-
-  <div id="footerActionBar" data-role="footer" data-theme="none" class="nav-bar bottom-anchor">
-    <ul class="nav-bar footer-nav-bar ">
-      <!-- <li><a onclick="toggleJsonPanel();"><span class="pictographs">E </span>JSON</a></li> -->
     </ul>
   </div>
 </template>
