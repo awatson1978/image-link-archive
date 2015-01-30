@@ -6,7 +6,7 @@ Template.footerNavbar.events({
     Router.go('/mylibrary');
   },
   'click #newImageButon': function (evt, tmpl) {
-    Session.set("anchorImage", false);
+    Session.set("selectedImage", false);
     $('#upsertImageModal').modal("show");
   },
   'click #editImageButton': function (evt, tmpl) {

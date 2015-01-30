@@ -1,12 +1,10 @@
 Template.assetsDisplayTemplate.helpers({
   selected_image: function(){
-    if(Session.get("anchorImage")){
-      // var url = Session.get("anchorImage");
-      // return url.substring(url.lastIndexOf('/')+1);
-      return 'images/grays.anatomy.tiles/' + Session.get("anchorImage") + '.png'
+    if(Session.get("selectedImage")){
+      return Session.get("selectedImage").image;
+      // return 'images/grays.anatomy.tiles/' + Session.get("anchorImage") + '.png'
     }else{
       return "images/placeholder-640x480.png";
-      // return "400x300image.gif";
     }
   }
 });
@@ -15,8 +13,8 @@ Template.assetsDisplayTemplate.helpers({
 Template.imageAssetInfoTemplate.helpers({
   anatomy_image: function(){
     if(Session.get("anchorImage")){
-      return 'images/grays.anatomy.tiles/' + Session.get("anchorImage") + '.png'
-      // return Session.get("anchorImage");
+      return Session.get("anchorImage");
+      // return 'images/grays.anatomy.tiles/' + Session.get("anchorImage") + '.png'
     }else{
       return "/images/placeholder-240x240.gif";
     }
@@ -39,7 +37,8 @@ Template.imageAssetInfoTemplate.helpers({
     if(Session.get("anchorImage")){
       // var url = Session.get("anchorImage");
       // return url.substring(url.lastIndexOf('/')+1);
-      return 'images/grays.anatomy.tiles/' + Session.get("anchorImage") + '.png'
+      return Session.get("anchorImage");
+      // return 'images/grays.anatomy.tiles/' + Session.get("anchorImage") + '.png'
     }else{
       return "no anchor image specified";
     }
