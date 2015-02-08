@@ -1,6 +1,6 @@
 
 Router.configure({
-  layoutTemplate: 'appLayout'
+  layoutTemplate: 'mainLayout'
 });
 
 Router.route('/imageLibrary', {
