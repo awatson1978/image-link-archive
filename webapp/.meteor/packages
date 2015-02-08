@@ -12,8 +12,10 @@ insecure
 less
 accounts-password
 accounts-ui
-iron:router
-mrt:bootstrap-3
-clinical:ui-vocabulary
 
-miguelvalverde:font-awesome-4.1.0
+iron:router
+nemo64:bootstrap
+natestrauser:font-awesome
+
+clinical:ui-vocabulary
+clinical:nightwatch

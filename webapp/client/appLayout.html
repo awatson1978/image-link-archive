@@ -3,11 +3,15 @@
 </head>
 
 <template name="mainLayout">
-  {{> deleteImageModal}}
-  {{> upsertImageModal}}
-  {{> previewImageModal}}
+  <div id="mainLayout">
+    {{> deleteImageModal}}
+    {{> upsertImageModal}}
+    {{> previewImageModal}}
 
-  {{> headerNavbar }}
-  {{> yield }}
-  {{> footerNavbar }}
+    {{> navbarHeader }}
+    <main id="mainPanel">
+      {{> yield }}
+    </main>
+    {{> navbarFooter }}
+  </div>
 </template>

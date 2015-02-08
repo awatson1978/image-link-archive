@@ -1,4 +1,4 @@
-Template.footerNavbar.events({
+Template.navbarFooter.events({
   'click #libraryStreamButton': function (evt, tmpl) {
     Router.go('/');
   },
