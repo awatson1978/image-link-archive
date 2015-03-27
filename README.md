@@ -5,7 +5,7 @@ A basic image link archive.  Intended to be used as a repository of medical-illu
 
 ![travis-build](https://travis-ci.org/awatson1978/image-link-archive.svg?branch=master)  
 
-![Scheduling Screenshot](https://raw.githubusercontent.com/awatson1978/image-link-archive/master/public/image-link-archive-screenshot.png)  
+![Scheduling Screenshot](https://raw.githubusercontent.com/awatson1978/image-link-archive/master/screenshots/image-link-archive-screenshot.png)  
 
 
 ============================
