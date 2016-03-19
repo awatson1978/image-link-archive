@@ -3,19 +3,22 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-standard-app-packages
-underscore
-backbone
-spiderable
-jquery
+meteor-platform
 insecure
 less
+
+accounts-base
 accounts-password
-accounts-ui
+jquery
 
-iron:router
 nemo64:bootstrap
-natestrauser:font-awesome
 
-clinical:ui-vocabulary
-clinical:nightwatch
+clinical:fonts
+clinical:router
+clinical:active-entry
+clinical:active-layout
+clinical:active-layout-reset
+clinical:theming
+clinical:keybindings@1.3.0
+
+#clinical:ui-vocabulary
