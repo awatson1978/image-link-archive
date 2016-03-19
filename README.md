@@ -29,4 +29,4 @@ meteor
 ============================
 #### Licensing
 
-MIT License. Use as you wish, including for commercial purposes.
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
